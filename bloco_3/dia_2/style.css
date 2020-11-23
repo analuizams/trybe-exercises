@@ -1,0 +1,38 @@
+h1 {
+    font-size: 65px; 
+    color: orange;
+    font-family: sans-serif;
+    text-decoration: underline;
+  }
+
+  ul {
+    background-color: pink;
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 3em;
+    font-style: italic;
+  }
+
+  .tagpeul {
+    background-color: powderblue;
+  }
+
+  #um {
+    background-color: yellow;
+  }
+
+  #dois {
+    background-color: red;
+  }
+
+  #tres {
+    background-color: brown;
+  }
