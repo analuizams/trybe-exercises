@@ -29,3 +29,4 @@ console.log(verifyPalindrome(arara))
     } else {
         console.log(false)
     }
+    
