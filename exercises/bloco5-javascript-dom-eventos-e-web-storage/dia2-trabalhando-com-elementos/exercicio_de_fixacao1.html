@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="paiDoPai">
+      <div id="pai">
+        <div id="primeiroFilho"></div>
+        <div id="elementoOndeVoceEsta">
+          <div id="primeiroFilhoDoFilho"></div>
+          <div id="segundoEUltimoFilhoDoFilho"></div>
+        </div>
+        Atenção!
+        <div id="terceiroFilho"></div>
+        <div id="quartoEUltimoFilho"></div>
+      </div>
+    </div>
+    <script>
+      // PARTE 1 - BUSCANDO ELEMENTOS
+      // 1 Acesse o elemento elementoOndeVoceEsta .
+      document.querySelector("#elementoOndeVoceEsta");
+      // 2 Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+      document.querySelector("#elementoOndeVoceEsta").parentElement.style.color = "red";
+      // 3 Acesse o primeiroFilhoDoFilho e adicione um texto a ele.
+      document.querySelector("#primeiroFilhoDoFilho").innerText = "Texto aqui";
+      // 4 Acesse o primeiroFilho a partir de pai .
+      document.querySelector("#pai").firstElementChild;
+      // 5 Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+      document.querySelector("#elementoOndeVoceEsta").previousElementSibling;
+      // 6 Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+      document.querySelector("#elementoOndeVoceEsta").nextSibling;
+      // 7 Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+      document.querySelector("#elementoOndeVoceEsta").nextSibling.nextSibling;
+      // 8 Agora acesse o terceiroFilho a partir de pai .
+      document.querySelector("#pai").lastElementChild.previousElementSibling;
+
+      // PARTE 2 - CRIANDO ELEMENTOS
+      // 1 Crie um irmão para elementoOndeVoceEsta .
+      //document.createElement("TIPO DO ELEMENTO")
+      let irmaoDoElemento = document.createElement("div")
+      irmaoDoElemento.innerText = "Cadê Você?";
+      let elementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta");
+      elementoOndeVoceEsta.appendChild(irmaoDoElemento);
+
+      // ;
+      // 2 Crie um filho para elementoOndeVoceEsta .
+
+      // 3 Crie um filho para primeiroFilhoDoFilho .
+
+      // 4 A partir desse filho criado, acesse terceiroFilho .
+
+      // PARTE 3 - REMOVENDO ELEMENTOS
+      // 1 Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+
+    </script>
+</body>
+</html>
