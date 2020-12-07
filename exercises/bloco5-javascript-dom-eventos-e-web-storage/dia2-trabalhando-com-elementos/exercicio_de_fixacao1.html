@@ -40,20 +40,44 @@
       // PARTE 2 - CRIANDO ELEMENTOS
       // 1 Crie um irmão para elementoOndeVoceEsta .
       //document.createElement("TIPO DO ELEMENTO")
-      let irmaoDoElemento = document.createElement("div")
-      irmaoDoElemento.innerText = "Cadê Você?";
-      let elementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta");
-      elementoOndeVoceEsta.appendChild(irmaoDoElemento);
+      const irmaoDoElemento = document.createElement("div");
+      irmaoDoElemento.innerText = "Cadê Você, irmão do elemento?";
+      irmaoDoElemento.id = "irmaoDoElemento";
+      const pai = document.querySelector("#pai");
+      pai.appendChild(irmaoDoElemento);
 
-      // ;
       // 2 Crie um filho para elementoOndeVoceEsta .
+      const filhoDoElemento = document.createElement("div");
+      filhoDoElemento.innerText = "Cadê Você, filho do elemento?";
+      filhoDoElemento.id = "filhoDoElemento";
+      const elementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta");
+      elementoOndeVoceEsta.appendChild(filhoDoElemento);
 
       // 3 Crie um filho para primeiroFilhoDoFilho .
+      const filhoDoPrimeiroFilhoDoFilho = document.createElement("div");
+      filhoDoPrimeiroFilhoDoFilho.innerText = "Filho do Primeiro Filho do Filho";
+      filhoDoPrimeiroFilhoDoFilho.id ="filhoDoPrimeiroFilhoDoFilho";
+      const primeiroFilhoDoFilho = document.querySelector("#primeiroFilhoDoFilho");
+      primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho);
 
       // 4 A partir desse filho criado, acesse terceiroFilho .
+      document.querySelector("#filhoDoPrimeiroFilhoDoFilho").parentElement.parentElement.nextElementSibling;
 
       // PARTE 3 - REMOVENDO ELEMENTOS
       // 1 Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+      pai.removeChild(pai.lastElementChild);
+      pai.removeChild(pai.firstElementChild);
+      pai.removeChild(pai.lastElementChild);
+      pai.removeChild(pai.lastElementChild);
+
+      // pai.parentElement.remove();
+
+      const elemento1 = document.querySelector('#elementoOndeVoceEsta');
+      elemento1.lastElementChild.remove();
+      elemento1.lastElementChild.remove();
+      elemento1.lastChild.remove();
+      elemento1.lastChild.remove();
+      elemento1.firstElementChild.firstElementChild.remove();
 
     </script>
 </body>
