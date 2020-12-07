@@ -218,7 +218,7 @@ Implemente uma função que adiciona um evento que ao clicar em um dia do mês n
 Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
 */
 function colorDay() {
-  let monthDay = document.querySelectorAll('.days');
+  let monthDay = document.querySelectorAll('.day');
   // let taskDiv = document.querySelector('.task li');
   let initialColor = 'rgb(119, 119, 119)';
 
@@ -226,14 +226,15 @@ function colorDay() {
 
     monthDay[index].addEventListener('click', function(event) {
       let selectedTask = document.querySelector('.task.selected');
-      let taskColor = selectedTask.style.backgroundColor;
 
       if (selectedTask == null) {
         return
       }
 
-      if (event.target.style.backgroundColor !== initialColor) {
-        event.target.style.backgroundColor = initialColor;
+      let taskColor = selectedTask.style.backgroundColor;
+
+      if (event.target.style.color == initialColor) {
+        event.target.style.color = initialColor;
       } else {
         event.target.style.backgroundColor = taskColor;
       }
@@ -266,7 +267,7 @@ function addNewTask() {
   })
 
   inputField.addEventListener('keyup', function(event) {
-    if (event.keycode === 13 && inputField.value.length > 0) {
+    if (event.keyCode === 13 && inputField.value.length > 0) {
       newTask.innerText = inputField.value;
       taskList.appendChild(newTask);
       inputField.value = '';
