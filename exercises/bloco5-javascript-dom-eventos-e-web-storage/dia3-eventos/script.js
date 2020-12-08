@@ -135,29 +135,30 @@ displayFriday(dezFridays);
 
 /* Exercício 6:
 Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
-
+*/
 function dayZoomIn() {
   const days = document.querySelectorAll('#days li');
-
-
-  days.addEventListener('mouseover', function(event) {
-    event.target.style.fontSize = '30px';
-    event.target.style.fontWeight = '600';
-  })
+  for (let index = 0; index < days.length; index += 1) {
+      days[index].addEventListener('mouseover', function(event) {
+      event.target.style.fontSize = '30px';
+      event.target.style.fontWeight = '600';
+    })
+  }
 }
 
 function dayZoomOut() {
-  const days = document.getElementById('days');
-
-  days.addEventListener('mouseout', function(event) {
-    event.target.style.fontSize = '20px';
-    event.target.style.fontWeight = '200';
-  })
+  const days =  document.querySelectorAll('#days li');
+  for (let index = 0; index < days.length; index += 1) {
+      days[index].addEventListener('mouseout', function(event) {
+      event.target.style.fontSize = '20px';
+      event.target.style.fontWeight = '200';
+    })
+  }
 }
 
 dayZoomIn();
 dayZoomOut();
-*/
+
 
 /* Exercício 7:
 Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
