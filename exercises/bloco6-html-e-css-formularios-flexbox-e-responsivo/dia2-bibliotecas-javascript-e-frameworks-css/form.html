@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href="style.css" rel='stylesheet' type="text/css">
+    <link href='bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css' rel='stylesheet'>
+    <title>Formulário Currículo</title>
+  </head>
+</head>
+<body>
+    <header>
+        <h1>Formulário de Currículo</h1>
+        <p>Preencha os campos abaixo:</p>
+    </header>
+    <form id='form'>
+       <fieldset>
+           <div class='margin'>
+               <label for='name-input'>Nome Completo: </label>
+               <input type='text'id='name-input' name='full-name' placeholder='Digite seu nome' maxlenght='40'required>
+           </div>
+           <div class='margin'>
+               <label for='email-input'>E-mail: </label>
+               <input type='text'id='email-input' name='email' placeholder='Digite seu e-mail' maxlenght='50'required>
+           </div>
+           <div class='margin'>
+               <label for='cpf-input'>CPF: </label>
+               <input type='text'id='cpf-input' name='cpf' placeholder='Digite seu CPF' maxlenght='11'required>
+           </div>
+           <div class='margin'>
+                <label for='address-input'>Endereço: </label>
+                <input type='text'id='address-input' name='address' placeholder='Digite seu endereço' maxlenght='200'required>
+           </div>
+           <div class='margin'>
+               <label for='city-input'>Cidade: </label>
+               <input type='text'id='city-input' name='city' placeholder='Digite sua cidade' maxlenght='28'required>
+           </div>
+           <div class='margin'>
+               <label for='state-input'>Estado: </label>
+               <select name='state'id='state-input' value='' required></select>
+           </div>
+           <div class='margin'>
+               <label for='house-ap-input'>Tipo: </label>
+               <label for='house'><input type='radio' name='house-ap' id='house' value='house' required>Casa</label>
+               <label for='ap'><input type='radio' name='house-ap' id='ap' value='apartment' required>Apartamento</label>
+           </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <div class='margin'>
+            <label for='cv-resume'>Resumo do Currículo: </label><br>
+            <textarea name='cv-resume' id='cv-resume' maxlength='1000' cols='75' rows='15' required></textarea>
+        </div>
+        <div class='margin'>
+            <label for='position'>Cargo: </label>
+            <input type='text' name='position' id='position' maxlength='40' required>
+        </div>
+        <div class='margin'>
+            <label for='desc-position'>Descrição do Cargo: </label>
+            <input type='text' name='desc-position' id='desc-position' maxlength='500' required>
+        </div>
+        <div class='margin'>
+            <label for='start-date'>Data de Início: </label>
+            <input type='date' name='start-date' id='start-date' value='' required>
+        </div>
+    </fieldset>
+    <br>
+    <div class='center'>
+        <button class ='submit-btn button' type='button'>Enviar</button>
+        <button class ='clear-btn button' type='button'>Limpar</button>
+    </div>
+   </form> 
+   <div class='form-info'></div>
+   <script src='https://cdn.jsdelivr.net/npm/pikaday/pikaday.js'></script>
+   <script src='node-modules/just-validate/dist/js/just-validate.min.js'></script>
+   <script src='script.js'></script>
+</body>
+</html>
