@@ -1,0 +1,19 @@
+.personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 2%;
+  padding: 20px;
+  width: 70%;
+}
+
+.field {
+  line-height: 22px;
+  width: 100%;
+}
+
+.inputField {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
